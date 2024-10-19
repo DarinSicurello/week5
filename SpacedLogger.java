@@ -1,32 +1,16 @@
 
 public class SpacedLogger implements Logger {
-
-    @Override
-    public void logInfo(String message) {
-        log(message);
-    }
-
-    @Override
-    public void logWarning(String message) {
-        log(message);
-    }
-
-    @Override
-    public void logError(String message) {
-        log(message);
-    }
-
-    @Override
-    public void logDebug(String message) {
-        log(message);
-    }
-
-    private void log(String message) {
-        String spacedMessage = addSpaces(message);
-        System.out.println(spacedMessage);
-    }
-
-    private String addSpaces(String message) {
-        return message.replaceAll("", " ").trim();
+    
+    public static void log(String message) {
+        // Changes the characters
+        char[] characters = message.toCharArray();
+        
+        // Iterate the loop for the each letter length
+        for (int i = 0; i < characters.length; i++) {
+            System.out.print(characters[i]);
+            if (i < characters.length - 1) {
+                System.out.print(" "); //SPACE
+            }
+        } 
     }
 }

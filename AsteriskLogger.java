@@ -11,7 +11,9 @@
     //side of the String (e.g. if the String passed in is “Hello”, then it should print ***Hello*** to the console).
     
     public void error(String message) {
-        System.err.println("!!! " + message + " !!!");
+        System.err.println("************************************");
+        System.err.println("*** " + "Error:" + message + " ***");
+        System.err.println("************************************");
     }
     
     //Q4b. The error method on the AsteriskLogger should print the String it receives inside a box of asterisks,
